@@ -1,5 +1,5 @@
-FROM node:alpine
+FROM golang:buster
 
-RUN yarn global add fast-cli
+RUN go get github.com/gesquive/fast-cli
 
-CMD [ "fast", "--upload" ]
+CMD [ "fast-cli" ]
