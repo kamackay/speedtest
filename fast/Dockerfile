@@ -1,6 +1,5 @@
-FROM python:alpine
+FROM node:alpine
 
-# RUN apk update && apk upgrade && apk add --update --no-cache \
-RUN pip install fast.com
+RUN yarn global add fast-cli
 
-CMD [ "fast" ]
+CMD [ "fast", "--upload" ]
