@@ -14,8 +14,6 @@ docker-build-master:
     - docker push "$CI_REGISTRY_IMAGE:js"
     - docker build --pull -t "$CI_REGISTRY_IMAGE:fast" ./fast
     - docker push "$CI_REGISTRY_IMAGE:fast"
-    - docker build --pull -t "kamackay/speedtest:latest" ./js
-    - docker push kamackay/speedtest:latest
   only:
     - master
 
